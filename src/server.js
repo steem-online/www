@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 var sitemap = sm.createSitemap ({
-  hostname: 'https://www.steem.online.com',
+  hostname: 'https://www.steem.online',
   cacheTime: 600000,        // 600 sec - cache purge period 
     urls: [
      { url: '/',  changefreq: 'daily', priority: 0.3 },
