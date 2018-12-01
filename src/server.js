@@ -49,63 +49,75 @@ app.get('/sitemap.xml', function(req, res) {
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
+  res.sendFile(path.join(__dirname + '/views/content/index.html'))
 })
 
 app.get('/publish', function (req, res) {
-  res.sendFile(path.join(__dirname + '/publish.html'))
+  res.sendFile(path.join(__dirname + '/views/client/publish.html'))
 })
 
 app.get('/user', function (req, res) {
-  res.sendFile(path.join(__dirname + '/user.html'))
+  res.sendFile(path.join(__dirname + '/views/content/user.html'))
 })
 
 app.get('/tags/:tag', function (req, res) {
-  res.sendFile(path.join(__dirname + '/tag.html'))
+  res.sendFile(path.join(__dirname + '/views/content/tag.html'))
 })
 
 app.get('/market', function (req, res) {
-  res.sendFile(path.join(__dirname + '/market.html'))
+  res.sendFile(path.join(__dirname + '/views/static/market.html'))
 })
 
 app.get('/news', function (req, res) {
-  res.sendFile(path.join(__dirname + '/news.html'))
+  res.sendFile(path.join(__dirname + '/views/static/news.html'))
 })
 
 app.get('/insights', function (req, res) {
-  res.sendFile(path.join(__dirname + '/insights.html'))
+  res.sendFile(path.join(__dirname + '/views/static/insights.html'))
 })
 
 app.get('/apps', function (req, res) {
-  res.sendFile(path.join(__dirname + '/apps.html'))
+  res.sendFile(path.join(__dirname + '/views/static/apps.html'))
 })
 
 app.get('/discover', function (req, res) {
-  res.sendFile(path.join(__dirname + '/discover.html'))
+  res.sendFile(path.join(__dirname + '/views/static/discover.html'))
 })
 
 app.get('/explore', function (req, res) {
-  res.sendFile(path.join(__dirname + '/explore.html'))
+  res.sendFile(path.join(__dirname + '/views/static/explore.html'))
 })
 
 app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname + '/about.html'))
+  res.sendFile(path.join(__dirname + '/views/static/about.html'))
 })
 
 app.get('/terms-and-privacy', function (req, res) {
-  res.sendFile(path.join(__dirname + '/terms-and-privacy.html'))
+  res.sendFile(path.join(__dirname + '/views/static/terms-and-privacy.html'))
 })
 
 app.get('/me', function (req, res) {
-  res.sendFile(path.join(__dirname + '/me.html'))
+  res.sendFile(path.join(__dirname + '/views/client/me.html'))
 })
 
 app.get('/@:username', function (req, res) {
-  res.sendFile(path.join(__dirname + '/user.html'))
+  res.sendFile(path.join(__dirname + '/views/content/user.html'))
 })
 
 app.get('/@:username/:permLink', function (req, res) {
-  res.sendFile(path.join(__dirname + '/article.html'))
+  res.sendFile(path.join(__dirname + '/views/content/article.html'))
+})
+
+app.get('/partials/navbar.html', function (req, res) {
+  res.sendFile(path.join(__dirname + '/views/partials/navbar.html'))
+})
+
+app.get('/partials/sidebar.html', function (req, res) {
+  res.sendFile(path.join(__dirname + '/views/partials/sidebar.html'))
+})
+
+app.get('/partials/footer.html', function (req, res) {
+  res.sendFile(path.join(__dirname + '/views/partials/footer.html'))
 })
 
 app.get('/:category/@:username/:permLink', function (req, res) {	
@@ -115,7 +127,7 @@ app.get('/:category/@:username/:permLink', function (req, res) {
 })
 
 app.use(function (req, res) {
-  res.status(404).sendFile(path.join(__dirname + '/404.html'))
+  res.status(404).sendFile(path.join(__dirname + '/views/static/404.html'))
 })
 
  
