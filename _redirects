@@ -1,0 +1,32 @@
+
+/#client
+/publish /src/views/client/publish.html 200
+/me /src/views/client/me.html 200
+
+/#content
+/ /src/views/content/index.html    200
+/post/:user/:permlink /src/views/content/post.html    200
+/account/:user /src/views/content/account.html    200
+/tags/:tag/ /src/views/content/tag.html    200
+
+#router for dynamic page/account calls
+/@* /src/views/static/404.html 200
+
+#static
+/apps /src/views/static/apps.html  200
+/discover /src/views/static/discover.html 200
+/explore /src/views/static/explore.html 200
+/insights /src/views/static/insights.html 200
+/market /src/views/static/market.html 200
+/news /src/views/static/news.html 200
+/terms-and-privacy /src/views/static/terms-and-privacy.html 200
+/about /src/views/static/about.html 200
+
+#partials
+/partials/navbar.html /src/views/partials/navbar.html 200
+/partials/sidebar.html /src/views/partials/sidebar.html 200
+/partials/footer.html /src/views/partials/footer.html 200
+
+#public
+#/scripts/*  /public/scripts/:splat 200
+#/img/*  /public/img/:splat 200
